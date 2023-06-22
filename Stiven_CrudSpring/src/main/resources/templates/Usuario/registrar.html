@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<center>
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Usuario</title>
+    <link th:href="@{/registrarU.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Registrar Usuario</h1>
+    <form action="#" th:action="@{/usuario/registrar}" th:object="${usuario}" method="post">
+        <label for="cc">Cedula:</label>
+        <input type="text" id="cc" th:field="*{cc}"/>
+        <br/>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" th:field="*{pass}"/>
+        <br/>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" th:field="*{nombre}"/>
+        <br/>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" th:field="*{apellido}"/>
+        <br/>
+        <label for="genero">Género:</label>
+        <input type="text" id="genero" th:field="*{genero}"/>
+        <br/>
+        <label for="email">Email:</label>
+        <input type="text" id="email" th:field="*{email}"/>
+        <br/>
+        <button type="submit">Registrar</button>
+    </form>
+    <p th:text="${mensaje}" th:if="${not #strings.isEmpty(mensaje)}"></p>
+    <p th:text="${error}" th:if="${not #strings.isEmpty(error)}"></p>
+    <br>
+    <a href="/">Ir a Inicio</a>
+</body>
+	</center>
+</html>

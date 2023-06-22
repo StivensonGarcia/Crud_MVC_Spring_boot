@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<center> 
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuario</title>
+    <link th:href="@{/editarU.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form action="#" th:action="@{/usuario/editar/{cc}(cc=${usuario.cc})}" th:object="${usuario}" method="post">
+        <label for="cc">Cedula:</label>
+        <input type="text" id="cc" th:field="*{cc}" readonly="readonly"/>
+        <br/>
+        <br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" th:field="*{pass}"/>
+        <br/>
+        <br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" th:field="*{nombre}"/>
+        <br/>
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" th:field="*{apellido}"/>
+        <br/>
+        <br>
+        <label for="genero">Género:</label>
+        <input type="text" id="genero" th:field="*{genero}"/>
+        <br/>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" th:field="*{email}"/>
+        <br/>
+        <br>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    <a href="/">Ir a Inicio</a>
+</body>
+	</center>
+</html>

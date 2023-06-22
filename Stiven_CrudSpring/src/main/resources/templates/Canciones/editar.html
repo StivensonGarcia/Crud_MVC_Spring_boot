@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<center>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Canción</title>
+     <link th:href="@{/editarC.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <h1>Editar Canción</h1>
+    <form action="#" th:action="@{/canciones/editar/{id}(id=${cancion.id})}" th:object="${cancion}" method="post">
+        <label>ID:</label>
+        <input type="number" th:field="*{id}" readonly><br><br>
+        
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required><br><br>
+        
+        <label>Ritmo:</label>
+        <input type="text" th:field="*{ritmo}" required><br><br>
+        
+        <label>Duración:</label>
+        <input type="text" th:field="*{duracion}" required><br><br>
+        
+        <label>Álbum:</label>
+        <input type="text" th:field="*{album}" required><br><br>
+        
+        <label>Posición en el álbum:</label>
+        <input type="text" th:field="*{posicionenalbum}" required><br><br>
+        
+        <label>Banda:</label>
+        <input type="text" th:field="*{banda}" required><br><br>
+        
+        <label>Intérprete:</label>
+        <input type="text" th:field="*{interprete}" required><br><br>
+        
+        <label>Autor:</label>
+        <input type="text" th:field="*{autor}" required><br><br>
+        
+        <label>Fecha de Lanzamiento:</label>
+        <input type="text" th:field="*{fechalanzamiento}" required><br><br>
+        
+        <label>Cedula del Usuario:</label>
+        <input type="number" th:field="*{usuariocc}" required><br><br>
+        
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+	</center>
+	<a href="/">Ir a Inicio</a>
+	<br>
+	<br>
+</html>

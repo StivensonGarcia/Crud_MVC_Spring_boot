@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+/* Estilos para el cuerpo del formulario */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Estilos para el encabezado */
+h1 {
+  text-align: center;
+}
+
+/* Estilos para el formulario */
+form {
+  margin-top: 20px;
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilos para los campos de entrada de texto */
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  padding: 5px;
+}
+
+/* Estilos para el botón de envío */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos para los mensajes de texto */
+p {
+  margin-top: 10px;
+}
+
+/* Estilos para el enlace */
+a {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}

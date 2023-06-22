@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link th:href="@{/login.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form action="#" th:action="@{/usuario/login}" th:object="${usuario}" method="post">
+        <label for="cc">Cedula:</label>
+        <input type="text" id="cc" th:field="*{cc}"/>
+        <br/>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" th:field="*{pass}"/>
+        <br/>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p th:text="${error}" th:if="${not #strings.isEmpty(error)}"></p>
+    <a href="/">Ir a Inicio</a>
+</body>
+</html>

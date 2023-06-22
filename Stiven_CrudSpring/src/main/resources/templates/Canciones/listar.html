@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+	<center>
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Canciones</title>
+            <link th:href="@{/listarC.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <h1>Listado de Canciones</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Ritmo</th>
+            <th>Duración</th>
+            <th>Álbum</th>
+            <th>Posición en el álbum</th>
+            <th>Banda</th>
+            <th>Intérprete</th>
+            <th>Autor</th>
+            <th>Fecha de Lanzamiento</th>
+            <th>Cedula del Usuario</th>
+            <th>Acciones</th>
+        </tr>
+        <tr th:each="cancion : ${canciones}">
+            <td th:text="${cancion.id}"></td>
+            <td th:text="${cancion.nombre}"></td>
+            <td th:text="${cancion.ritmo}"></td>
+            <td th:text="${cancion.duracion}"></td>
+            <td th:text="${cancion.album}"></td>
+            <td th:text="${cancion.posicionenalbum}"></td>
+            <td th:text="${cancion.banda}"></td>
+            <td th:text="${cancion.interprete}"></td>
+            <td th:text="${cancion.autor}"></td>
+            <td th:text="${cancion.fechalanzamiento}"></td>
+            <td th:text="${cancion.usuariocc}"></td>
+            <td>
+                <a th:href="@{/canciones/editar/{id}(id=${cancion.id})}">Editar</a>
+                <a th:href="@{/canciones/eliminar/{id}(id=${cancion.id})}">Eliminar</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</center>
+<a href="/">Ir a Inicio</a>
+<br>
+<br>
+</html>
